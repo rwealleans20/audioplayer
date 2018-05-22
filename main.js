@@ -9,6 +9,13 @@ var music = [{
         } ]
 }];
 
-function onClick(){
-    alert("Hello");
+var audioPyscho = new Audio('sound/pyscho.mp3');
+
+function onClickPlay(){
+    audioPyscho.play();
+    $("h1").append(`<p onclick="onClickPause()">Pause Music</p>`);
+}
+
+function onClickPause(){
+    this.audioPyscho.pause();
 }
