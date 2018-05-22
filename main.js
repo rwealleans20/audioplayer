@@ -21,4 +21,3 @@ function onClickPause(){
     audioPyscho.pause();
     $(".stopMusic").html(`<div class="playMusic"><h1 class="audioPause" onclick="onClickPlay()">Play</h1></div>`);
 }
-
