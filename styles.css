@@ -15,3 +15,10 @@ img {
     height: 200px;
     width: 200px;
 }
+
+.songPlaylist {
+    background-color: red;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
