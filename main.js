@@ -7,10 +7,10 @@ var music = [{
         artist: "Post Malone",
         lyrics: "sound/pyscho.mp3"
     },{
-        name : "Lion",
+        name : "Rockstar",
         length: "3:57",
         artist: "Post Malone",
-        lyrics: "sound/pyscho.mp3"
+        lyrics: "sound/rockstar.mp3"
     }, {
         name : "Hello",
         length: "3:57",
@@ -19,10 +19,14 @@ var music = [{
     } ]
 }];
 
+var audio;
+
 function buildPlaylist(){
+    
+    
     music[0].tracks.forEach(function(a, num){
         var str = "";
-
+        
         str += `<div class="songPlaylist" onclick="onClickPlay(${num})">${a.name}</div>`;
 
         $(".playlist").append(str);
@@ -30,7 +34,13 @@ function buildPlaylist(){
 }
 
 function onClickPlay(num){
-    alert(num);
+
+    $(".srcAudio").attr("src", music[0].tracks[num].lyrics);
+    console.log(music[0].tracks[num].lyrics);
+    // audio = new Audio(`${music[0].tracks[num].lyrics}`);
+    // console.log(num)
+    // audio.play();
+    //console.log(audio)
 }
 
 buildPlaylist();
